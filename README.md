@@ -59,7 +59,8 @@ Ok, first thing we need to do is catching the intent in order to read the data M
 
 ```java
 @Override
-protected void onCreate(Bundle savedInstanceState) {
+protected void onCreate(Bundle savedInstanceState) 
+{
     super.onCreate(savedInstanceState);
 
     // fetch intent value(s) and apply to fragment...
@@ -70,7 +71,8 @@ protected void onCreate(Bundle savedInstanceState) {
 
     setContentView(R.layout.activity_second);
 
-    if (savedInstanceState == null) {
+    if (savedInstanceState == null) 
+    {
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.container, second)
                 .commit();
