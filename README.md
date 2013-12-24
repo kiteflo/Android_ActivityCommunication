@@ -11,7 +11,7 @@ This Mini Codebase chalks out a clear way (the Android recommended way of so cal
 
 The example is simple: there are two activities (MainActivity and SecondActivity), the first activity launches the send one and passes in a value. Next the second activity is closed and passes a value back to the first activity...et voila.
 
-# Android inter activity communication "MainActivity"
+## Android inter activity communication "MainActivity"
 
 The most important point is, when launching the SecondActivity this needs to be done using the **startActivityForResult** method  and not the **startActivity** method!
 
@@ -51,7 +51,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data)
 
 That's all you need to apply to the MainActivity, coding the SecondActivity is pretty straight forward:
 
-# Android inter activity communication "SecondActivity"
+## Android inter activity communication "SecondActivity"
 
 Note: we are using fragments for view encapsulation, dont worry about this additional layer you can do all we're doing in our fragment within your activity the same way...we prefer the fragment way.
 
@@ -99,3 +99,7 @@ public void onBackToFirstActivity(View view)
 ```
 
 Done!!! You notice the **setResult** method? That's exactly the magic enabling us to pass in any data which than can be used within our MainActivity...that's the best and Android recommended way of handling inter activity communication, hurra!
+
+## Conclusion
+
+Passing data between activities is pretty simple. Using the recommended Android way we can ensure that the activity is 100%ly closed using finisehd method, of course when heading for a stateful solution other patterns might be applied. Maybe I'm gonna extend this example next couple of days in order to handle a stateful Activity launch/resume - stay tuned!
