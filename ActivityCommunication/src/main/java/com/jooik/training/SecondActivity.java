@@ -8,16 +8,23 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 
-public class MainActivity extends ActionBarActivity {
+public class SecondActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        // fetch intent value(s) and apply to fragment...
+        Intent trigger = getIntent();
+        String value = trigger.getExtras().getString("PASSIN");
+        FragmentSecond second = new FragmentSecond();
+        second.setPassInValue(value);
+
+        setContentView(R.layout.activity_second);
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new FragmentMain())
+                    .add(R.id.container, second)
                     .commit();
         }
     }
@@ -27,7 +34,7 @@ public class MainActivity extends ActionBarActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.second, menu);
         return true;
     }
 
@@ -43,25 +50,16 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data)
-    {
-        String value = data.getExtras().getString("PASSBACK");
-        EditText et = (EditText)findViewById(R.id.et_first_passback);
-        et.setText(value);
-    }
-
     // ------------------------------------------------------------------------
     // direct UI responders
     // ------------------------------------------------------------------------
 
-    public void onLaunchSecondActivity(View view)
+    public void onBackToFirstActivity(View view)
     {
-        Intent secIntent = new Intent(this,SecondActivity.class);
-        EditText et = (EditText)findViewById(R.id.et_first_passin);
-        String name = et.getText().toString();
-        secIntent.putExtra("PASSIN",name);
-
-        startActivityForResult(secIntent,0);
+        EditText et = (EditText)findViewById(R.id.et_second_passback);
+        Intent returnIntent = new Intent();
+        returnIntent.putExtra("PASSBACK", et.getText().toString());
+        setResult(RESULT_OK, returnIntent);
+        finish();
     }
 }

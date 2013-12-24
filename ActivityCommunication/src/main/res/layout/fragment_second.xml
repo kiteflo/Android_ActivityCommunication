@@ -1,13 +1,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
-    tools:context="com.jooik.training.MainActivity$PlaceholderFragment">
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:paddingLeft="@dimen/activity_horizontal_margin"
+              android:paddingRight="@dimen/activity_horizontal_margin"
+              android:paddingTop="@dimen/activity_vertical_margin"
+              android:paddingBottom="@dimen/activity_vertical_margin"
+              android:orientation="vertical"
+              tools:context="com.jooik.training.MainActivity$PlaceholderFragment">
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="First Activity"
+            android:text="Second Activity"
             android:id="@+id/textView"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="PassIn value:"
+            android:text="PassedIn value:"
             android:id="@+id/textView2"
             android:layout_below="@+id/textView"
             android:layout_alignParentLeft="true"
@@ -43,7 +43,7 @@
         <EditText
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/et_first_passin"
+            android:id="@+id/et_second_passin"
             android:layout_alignTop="@+id/textView2"
             android:layout_toRightOf="@+id/textView"
             android:layout_alignParentRight="true"
@@ -70,13 +70,12 @@
         <EditText
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/et_first_passback"
+            android:id="@+id/et_second_passback"
             android:layout_alignTop="@+id/textView2"
             android:layout_toRightOf="@+id/textView"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:layout_gravity="bottom"
-            android:text="(from 2nd Activity)"/>
+            android:layout_gravity="bottom"/>
     </LinearLayout>
 
     <LinearLayout
@@ -85,9 +84,9 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Launch SecondActivity"
+            android:text="Back to FirstActivity"
             android:id="@+id/button"
-            android:onClick="onLaunchSecondActivity"/>
+            android:onClick="onBackToFirstActivity"/>
     </LinearLayout>
 
 </LinearLayout>
