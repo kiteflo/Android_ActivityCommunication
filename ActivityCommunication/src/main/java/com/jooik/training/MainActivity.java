@@ -43,6 +43,12 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Handle activity result...
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
@@ -55,6 +61,10 @@ public class MainActivity extends ActionBarActivity {
     // direct UI responders
     // ------------------------------------------------------------------------
 
+    /**
+     * Launch SecondActivity via intent and pass value to SecondActivity...
+     * @param view
+     */
     public void onLaunchSecondActivity(View view)
     {
         Intent secIntent = new Intent(this,SecondActivity.class);

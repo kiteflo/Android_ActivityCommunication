@@ -54,6 +54,11 @@ public class SecondActivity extends ActionBarActivity {
     // direct UI responders
     // ------------------------------------------------------------------------
 
+    /**
+     * Finish activity and rise intent in order to notify FirstActivity the
+     * activity has been finished....
+     * @param view
+     */
     public void onBackToFirstActivity(View view)
     {
         EditText et = (EditText)findViewById(R.id.et_second_passback);
