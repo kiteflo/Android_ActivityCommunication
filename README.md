@@ -5,7 +5,7 @@ Passing values between Android activities sometimes just feels like fucking pain
 
 This Mini Codebase chalks out a clear way (the Android recommended way of so called "inter-activity-communication") - and it's really simple, you just need to know how this basically should work. And yes, I know: there is an "excellent" Android documentation in place but unfortunately these guys always treat the one-way-communication case only in terms of ActivityA notifies/launches ActivityB but there is no example chalking out the whole roundtrip...well, here is.
 
-![ScreenShot](/images/example.png)
+![ScreenShot](/images/example_small.png)
 
 # What do we do here?
 
