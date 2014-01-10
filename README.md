@@ -7,7 +7,7 @@ Passing values between Android activities sometimes just feels like fucking pain
 
 This Mini Codebase chalks out a clear way (the Android recommended way of so called "inter-activity-communication") - and it's really simple, you just need to know how this basically should work. And yes, I know: there is an "excellent" Android documentation in place but unfortunately these guys always treat the one-way-communication case only in terms of ActivityA notifies/launches ActivityB but there is no example chalking out the whole roundtrip...well, here is.
 
-![ScreenShot](/images/example_small.png)
+![ScreenShot](images/example_small.png)
 
 # What do we do here?
 
@@ -105,3 +105,5 @@ Done!!! You notice the **setResult** method? That's exactly the magic enabling u
 ## Conclusion
 
 Passing data between activities is pretty simple. Using the recommended Android way we can ensure that the activity is 100%ly closed using finisehd method, of course when heading for a stateful solution other patterns might need to be applied. Maybe I'm gonna extend this example next couple of days in order to handle a stateful Activity launch/resume - stay tuned!
+
+[![Image](images/twitter.png "Image title") ](https://twitter.com/_flomueller "Twitter")

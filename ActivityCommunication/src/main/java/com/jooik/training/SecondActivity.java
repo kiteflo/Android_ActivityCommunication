@@ -65,7 +65,6 @@ public class SecondActivity extends ActionBarActivity {
         Intent returnIntent = new Intent();
         returnIntent.putExtra("PASSBACK", et.getText().toString());
         setResult(RESULT_OK, returnIntent);
-        moveTaskToBack(true);
-        //finish();
+        finish();
     }
 }
